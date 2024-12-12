@@ -133,6 +133,10 @@ function createWindow() {
     screenEvent(mainWindow);
     registerHotKey(mainWindow);
     init();
+    mainWindow == null ? void 0 : mainWindow.on("blur", () => {
+      mainWindow == null ? void 0 : mainWindow.setOpacity(0);
+      mainWindow == null ? void 0 : mainWindow.hide();
+    });
     mainWindow == null ? void 0 : mainWindow.on("focus", () => {
       mainWindow == null ? void 0 : mainWindow.setOpacity(1);
       mainWindow == null ? void 0 : mainWindow.show();

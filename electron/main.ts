@@ -48,10 +48,10 @@ function createWindow() {
 		registerHotKey(mainWindow!)
 		init()
 
-		// mainWindow?.on('blur', () => {
-		// 	mainWindow?.setOpacity(0)
-		// 	mainWindow?.hide()
-		// })
+		mainWindow?.on('blur', () => {
+			mainWindow?.setOpacity(0)
+			mainWindow?.hide()
+		})
 
 		mainWindow?.on('focus', () => {
 			mainWindow?.setOpacity(1)
