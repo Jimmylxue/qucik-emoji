@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { observer } from 'mobx-react-lite'
 import {
 	Command,
 	CommandEmpty,
@@ -18,7 +17,7 @@ import { gitMojiList } from './core/command/gitmoji/const'
 
 const inputId = 'baseCommandInput'
 
-export const Base = observer(() => {
+export const Base = () => {
 	const [inputText, setInputText] = useState<string>('')
 
 	const [chooseMoji, setChooseMoji] = useState<string>('')
@@ -82,4 +81,4 @@ export const Base = observer(() => {
 			</Command>
 		</>
 	)
-})
+}
