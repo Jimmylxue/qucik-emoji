@@ -4,7 +4,8 @@
 
 **quick-emoji** 是一款实用的工具，旨在帮助用户通过输入关键词快速匹配到所需的 Emoji 表情。无论是在社交媒体、聊天应用还是其他文本输入场景中，**quick-emoji** 都能显著提高你的输入效率。
 
-![效果图](https://image.jimmyxuexue.top/img/image-20241212143607105.png)
+<img width="1920" alt="image" src="https://github.com/user-attachments/assets/c86ed7d8-4b6b-4794-b5e0-c2d197f86c76" />
+
 
 ## 特性
 
