@@ -110,7 +110,6 @@ const RENDERER_DIST = path$1.join(process.env.APP_ROOT, "dist");
 process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL ? path$1.join(process.env.APP_ROOT, "public") : RENDERER_DIST;
 let mainWindow;
 function createWindow() {
-  const { x, y } = getOpenWindowBound();
   mainWindow = new BrowserWindow({
     webPreferences: {
       preload: path$1.join(__dirname, "preload.mjs")
@@ -120,8 +119,8 @@ function createWindow() {
     alwaysOnTop: true,
     width: WindowBaseConfig.width,
     height: WindowBaseConfig.height,
-    x,
-    y,
+    // x,
+    // y,
     show: false
   });
   mainWindow.webContents.on("did-finish-load", () => {
@@ -133,10 +132,6 @@ function createWindow() {
     screenEvent(mainWindow);
     registerHotKey(mainWindow);
     init();
-    mainWindow == null ? void 0 : mainWindow.on("blur", () => {
-      mainWindow == null ? void 0 : mainWindow.setOpacity(0);
-      mainWindow == null ? void 0 : mainWindow.hide();
-    });
     mainWindow == null ? void 0 : mainWindow.on("focus", () => {
       mainWindow == null ? void 0 : mainWindow.setOpacity(1);
       mainWindow == null ? void 0 : mainWindow.show();
